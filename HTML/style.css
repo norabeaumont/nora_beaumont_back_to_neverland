@@ -1,0 +1,77 @@
+html{
+    background: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*_ BANNER _ */
+
+@keyframes scroll-banner {
+  0%   { transform: translateX(10%); }   /* start fully off-screen right */
+  100% { transform: translateX(-100%); }  /* end fully off-screen left */
+}
+
+#bannerBG{
+    background-color:rgb(90, 118, 200);
+    height:48px;
+    width: 100%;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;   /* vertical centering */
+    overflow: hidden;      /* hides text outside the banner */
+}
+
+.bannerBox{
+    display:inline-block;
+    animation: scroll-banner 10s linear infinite;
+    padding-left: 100%;     /* starts text off-screen to the right */
+    white-space: nowrap;
+}
+
+
+#bannerText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    color:white;
+}
+
+/*_ BANNER _ */
+
+/*_ GRID CONTAINER_ STRUCTURE*/ 
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*_ GRID CONTAINER _ STRUCTURE*/ 
+
+/*_ FORMATTING _ CONTENT */
+
+#songTitle{
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(90, 118, 200);
+}
+
+.mute{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: grey
+}
+
+.bold{
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(90, 118, 200);
+}
+
+.process{
+    color:green
+}
+
+#countdown {
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  margin: 8px 0 18px;
+}
+
+/*_ BLOCK LEFT _ CONTENT */
