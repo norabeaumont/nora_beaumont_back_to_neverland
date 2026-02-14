@@ -5,17 +5,21 @@
     <head>
         <meta charset="UTF-8">
         <title> Nora Beaumont | back to neverland </title>
+        <link 
+            rel = "stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link
             rel="stylesheet"
             href="style.css"
         />
+
     </head>
 
 <!--HTML-->
 
 <body>
 
-<!--BANNER-->
+<!--BANNER start-->
 
 <div id = "bannerBG">
     <span id = "bannerText" class = "bannerBox">
@@ -23,14 +27,34 @@
     </span>
 </div>
 
-<!--BANNER-->
+<!--BANNER end-->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="./arts/music-player-fill.svg"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://open.spotify.com/artist/4HxpD6jE59ttDpvMeDYbwP">Artist Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="mailto:noralinebelle@gmail.com">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class = "gridContainer">
-    <div class = "blockLEFT">
-        <h1 id = "songTitle"> Back to Neverland </h1>
-            <p class="mute"> written & recorded by Nora Beaumont </p>
-            <img src="arts/1x1gift.jpg" alt="cover art" width="200" height ="200"/> 
 
+    <div class = "blockLEFT">
+        <h1 id = "songTitle"> back to neverland </h1>
+            <p class="mute"> written & recorded by Nora Beaumont </p>
+            <img src="arts/1x1gift.jpg" alt="cover art" width="200" height ="200" style="padding-bottom: 20px;"/> 
 
         <h2 class="bold">Countdown to Release Date <br/>
             26.02.2026 
@@ -39,7 +63,7 @@
 
 
         <h3 class = "bold"> Lyrics </h3>
-            <p class = "mute"> 
+            <p class = "lyrics"> 
                 Will you fly to my bedroom tonight? <br/>
                 I'll be waiting up with the light on<br/>
                 Will you shine by my window tonight?<br/>
@@ -74,21 +98,91 @@
             </p>
     </div>
 
-    <div class = "blockRGT"> 
+<!--CAROUSEL-->
+    <div class="blockRIGHT">
+
         <h3 class = "bold"> Project Stages
-            <ol class="mute"> 
-                <li> Compose music & lyrics
-                <li> Record guitar instrumental & vocal stems on Logic Pro </li>
-                <li> Edit & bounce tracks </li>
-                <li> Master track for universal distribution </li>
-                <li> Conceptualize and order digital cover art </li>
-                <li> Upload music and schedule release </li>
-                <li> Create a countdown website </li>
-                <li> Film promotional video content & social boost on TikTok | IG </li>
-            </ol>
-        </h3>
+                <ol class="process"> 
+                    <li> Compose music & lyrics
+                    <li> Record guitar instrumental & vocal stems on Logic Pro </li>
+                    <li> Edit & bounce tracks </li>
+                    <li> Master track for universal distribution </li>
+                    <li> Conceptualize and order digital cover art </li>
+                    <li> Upload music and schedule release </li>
+                    <li> Create a countdown website </li>
+                    <li> Film promotional video content & social boost on TikTok | IG </li>
+                </ol>
+            </h3>
+
+
+        <div id="videoCarousel" class="carousel slide mt-4 blockRIGHT" data-bs-ride="false">
+
+            <div class="carousel-inner">
+
+                <!-- VIDEO 1 -->
+                <div class="carousel-item active text-center">
+                <video class="video-slide" autoplay muted controls loop playsinline>
+                    <source src="./arts/btsVideo.mp4" type="video/mp4">
+                </video>
+                </div>
+
+                  <!-- VIDEO 2-->
+                <div class="carousel-item text-center">
+                <video class="video-slide" autoplay muted controls loop playsinline>
+                    <source src="./arts/singVideo.mp4" type="video/mp4">
+                </video>
+                </div>
+
+                <!-- VIDEO 3-->
+                <div class="carousel-item text-center">
+                <video class="video-slide" autoplay muted controls loop playsinline>
+                    <source src="./arts/animation.mp4" type="video/mp4">
+                </video>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+            <div
+                id="imageCarousel"
+                class="carousel slide mt-4"
+                data-bs-ride="carousel"
+                data-bs-interval="2500"
+                data-bs-pause="false"
+                >
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                    <img src="arts/sktv1.jpg" class="d-block w-100 square-slide" alt="Promo image 1">
+                    </div>
+
+                    <div class="carousel-item">
+                    <img src="arts/sktv2.jpg" class="d-block w-100 square-slide" alt="Promo image 2">
+                    </div>
+
+                    <div class="carousel-item">
+                    <img src="./arts/chibiver2.jpg" class="d-block w-100 square-slide" alt="Promo image 3">
+                    </div>
+
+             </div>
     </div>
-</div>
-    
+
+<!--CAROUSEL-->
+
     <script src="countdown.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
