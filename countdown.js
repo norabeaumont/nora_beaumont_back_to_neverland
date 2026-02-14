@@ -1,6 +1,6 @@
 // Countdown to 26/02/2026 (UK date format: DD/MM/YYYY)
 
-// If you want the release to happen at midnight UK time:
+// ===== Countdown Logic =====
 const releaseDate = new Date("2026-02-26T00:00:00"); // local time on the viewer's device
 
 const countdownEl = document.getElementById("countdown");
@@ -31,3 +31,16 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+
+// ===== Carousel Video Control =====
+const carouselEl = document.getElementById("videoCarousel");
+
+if (carouselEl) {
+  carouselEl.addEventListener("slide.bs.carousel", () => {
+    carouselEl.querySelectorAll("video").forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+}
