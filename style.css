@@ -113,7 +113,7 @@ html{
    LISTS 
    ========================= */
 .blockRIGHT ol {
-  margin: 0;
+  margin-right: 50px;
   padding-top: 10px;
   padding-left: 10px;     /* consistent list indent */
 }
@@ -201,4 +201,4 @@ html{
     font-family:'Courier New', Courier, monospace;
     font-size: 15px;
     color: rgb(90, 118, 200);
-}}
+}
